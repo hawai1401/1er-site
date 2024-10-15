@@ -129,8 +129,6 @@ hr {
 
 #youtube:hover img {
   @media (max-width: 768px) {
-    height: 40px;
-    width: 40px;
   }
   @media (min-width: 768px) {
     height: 60px;
@@ -140,8 +138,6 @@ hr {
 }
 #twitter:hover img {
   @media (max-width: 768px) {
-    height: 40px;
-    width: 40px;
   }
   @media (min-width: 768px) {
     height: 60px;
@@ -151,8 +147,6 @@ hr {
 }
 #discord:hover img {
   @media (max-width: 768px) {
-    height: 40px;
-    width: 40px;
   }
   @media (min-width: 768px) {
     height: 60px;
@@ -162,8 +156,6 @@ hr {
 }
 #snapchat:hover img {
   @media (max-width: 768px) {
-    height: 40px;
-    width: 40px;
   }
   @media (min-width: 768px) {
     height: 60px;
@@ -173,8 +165,6 @@ hr {
 }
 #instagram:hover img {
   @media (max-width: 768px) {
-    height: 40px;
-    width: 40px;
   }
   @media (min-width: 768px) {
     height: 60px;
@@ -298,17 +288,26 @@ hr {
 }
 
 #sommaire {
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+  }
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  position: relative;
 }
 #sommaire a {
   color: #5663f7;
 }
 
 #sommaire .titre {
-  margin-bottom: 75px;
+  @media (max-width: 768px) {
+    margin-bottom: 35px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 75px;
+  }
+
   display: flex;
   justify-content: center;
 }
@@ -342,41 +341,90 @@ hr {
   background: rgba(255, 255, 255, 0.75);
 }
 #bio {
-  width: 370px;
-  font-size: 35px;
+  @media (max-width: 768px) {
+    width: 250px;
+    font-size: 23px;
+  }
+  @media (min-width: 768px) {
+    width: 370px;
+    font-size: 35px;
+  }
+
   transition: 0.3s ease;
 }
 #citations {
-  width: 530px;
-  font-size: 35px;
+  @media (max-width: 768px) {
+    width: 350px;
+    font-size: 22px;
+  }
+  @media (min-width: 768px) {
+    width: 530px;
+    font-size: 35px;
+  }
+
   transition: 0.3s ease;
 }
 #musique {
-  width: 540px;
-  font-size: 35px;
+  @media (max-width: 768px) {
+    width: 360px;
+    font-size: 22px;
+  }
+  @media (min-width: 768px) {
+    width: 540px;
+    font-size: 35px;
+  }
+
   transition: 0.3s ease;
 }
 #formulaire {
-  width: 720px;
-  font-size: 35px;
+  @media (max-width: 768px) {
+    width: 320px;
+    font-size: 23px;
+    br {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 720px;
+    font-size: 35px;
+    br {
+      display: none;
+    }
+  }
+
   transition: 0.3s ease;
 }
-
-#bio:hover {
-  width: 400px;
-  font-size: 40px;
+mobile #bio:hover {
+  @media (max-width: 768px) {
+  }
+  @media (min-width: 768px) {
+    width: 400px;
+    font-size: 40px;
+  }
 }
 #citations:hover {
-  width: 600px;
-  font-size: 40px;
+  @media (max-width: 768px) {
+  }
+  @media (min-width: 768px) {
+    width: 600px;
+    font-size: 40px;
+  }
 }
 #musique:hover {
-  width: 620px;
-  font-size: 40px;
+  @media (max-width: 768px) {
+  }
+  @media (min-width: 768px) {
+    width: 620px;
+    font-size: 40px;
+  }
 }
 #formulaire:hover {
-  width: 830px;
-  font-size: 40px;
+  @media (max-width: 768px) {
+  }
+  @media (min-width: 768px) {
+    width: 830px;
+    font-size: 40px;
+  }
 }
 
 form {
@@ -396,12 +444,19 @@ input[title="1"] {
   margin-top: 10px;
 }
 fieldset {
+  @media (max-width: 768px) {
+    font-size: 17px;
+    width: 310px;
+    height: 350px;
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+    width: 500px;
+    height: 303px;
+  }
   border: solid goldenrod 5px;
   color: goldenrod;
-  font-size: 20px;
   border-radius: 30px;
-  width: 500px;
-  height: 303px;
   margin-bottom: 20px;
 }
 legend {
@@ -418,13 +473,23 @@ form {
   flex-direction: column;
 }
 form div {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #message {
-  width: 780px;
-  height: 250px;
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 290px;
+  }
+  @media (min-width: 768px) {
+    width: 780px;
+    height: 250px;
+  }
+
   border-radius: 10px;
 }
 #contacter {
@@ -440,7 +505,11 @@ input[type="submit"] {
   transition: 0.3s ease;
 }
 input[type="submit"]:hover {
-  background-color: rgb(60, 161, 255);
+  @media (max-width: 768px) {
+  }
+  @media (min-width: 768px) {
+    background-color: rgb(60, 161, 255);
+  }
 }
 input[type="submit"]:active {
   background-color: rgb(99, 255, 60);
@@ -449,17 +518,31 @@ input[type="text"] {
   border-radius: 10px;
 }
 .message {
-  margin-left: 20px;
+  @media (min-width: 768px) {
+    margin-left: 20px;
+  }
 }
 #me_contacter .titre {
+  @media (max-width: 768px) {
+    margin-bottom: 35px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 75px;
+  }
   top: 75px;
-  margin-bottom: 75px;
+
   display: flex;
   justify-content: center;
 }
 #me_contacter .titre p {
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media (min-width: 768px) {
+    font-size: 45px;
+  }
   transition: 0.3s ease;
-  font-size: 45px;
+
   margin: 5px;
   padding-bottom: 10px;
   padding-top: 20px;
@@ -472,7 +555,16 @@ input[type="text"] {
   background: rgba(255, 255, 255, 0.65);
 }
 #me_contacter .titre:hover p {
-  border: solid goldenrod 5px;
-  color: goldenrod;
-  background-color: rgba(218, 165, 32, 0.65);
+  @media (max-width: 768px) {
+  }
+  @media (min-width: 768px) {
+    border: solid goldenrod 5px;
+    color: goldenrod;
+    background-color: rgba(218, 165, 32, 0.65);
+  }
+}
+
+@media (max-width: 768px) {
+}
+@media (min-width: 768px) {
 }
