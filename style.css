@@ -342,7 +342,7 @@ hr {
 }
 #bio {
   @media (max-width: 768px) {
-    width: 250px;
+    width: 260px;
     font-size: 23px;
   }
   @media (min-width: 768px) {
