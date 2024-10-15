@@ -394,7 +394,7 @@ hr {
 
   transition: 0.3s ease;
 }
-mobile #bio:hover {
+#bio:hover {
   @media (max-width: 768px) {
   }
   @media (min-width: 768px) {
