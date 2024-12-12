@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hawai1401</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href=".pictures/pdp.png" />
+    <datalist id="raison">
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
+    </datalist>
+  </head>
+  <body>
+    <div id="en-tete">
+      <div id="logo">
+        <img
+          src=".pictures/pdp.png"
+          alt="Votre navigateur ne supporte pas cette image."
+        />
+      </div>
+      <div class="titre">
+        <b><u>hawai1401</u></b>
+      </div>
+    </div>
+    <div id="reseaux">
+      <div id="youtube">
+        <a target="_blank" href="https://youtube.com/@hawai1401"
+          ><img
+            src=".pictures/youtube.png"
+            alt="Votre navigateur ne supporte pas cette image."
+        /></a>
+      </div>
+      <div id="twitter">
+        <a target="_blank" href="https://twitter.com/hawai1401"
+          ><img
+            src=".pictures/twitter.png"
+            alt="Votre navigateur ne supporte pas cette image."
+        /></a>
+      </div>
+      <div id="discord">
+        <a
+          target="_blank"
+          href="https://discordapp.com/users/1091617877725024326"
+          ><img
+            src=".pictures/discord.png"
+            alt="Votre navigateur ne supporte pas cette image."
+        /></a>
+      </div>
+      <div id="snapchat">
+        <a target="_blank" href="https://snapchat.com/add/hawai1401">
+          <img
+            src=".pictures/snapchat.png"
+            alt="Votre navigateur ne supporte pas cette image."
+        /></a>
+      </div>
+      <div id="instagram">
+        <a target="_blank" href="https://instagram.com/hawai1401"
+          ><img
+            src=".pictures/instagram.png"
+            alt="Votre navigateur ne supporte pas cette image."
+        /></a>
+      </div>
+      <div id="tiktok">
+        <a target="_blank" href="https://tiktok.com/@hawai1401"
+          ><img
+            src=".pictures/tiktok.png"
+            alt="Votre navigateur ne supporte pas cette image."
+        /></a>
+      </div>
+    </div>
+    <hr />
+    <div id="sommaire">
+      <div class="titre">
+        <u>Sommaire</u>
+      </div>
+      <div id="bio">
+        <p><a href="#moi">➔ Ma biographie</a></p>
+      </div>
+      <div id="formulaire">
+        <p>
+          <a href="#me_contacter"
+            >➔ Un formulaire pour<br />
+            me contacter</a
+          >
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div id="moi">
+      <p>
+        <big>Hey,</big><br /><br />
+
+        Moi c'est hawai1401 mais tout le monde m'appelle hawai.<br />
+        Je suis un jeune garcon qui a pour reve de devenir developpeur web.
+        J'adore ecouter de la musique, regarder des séries et des films et jouer
+        jeux video, surtout
+        <u>Warzone 3</u> et <u>Roblox</u>.<br />
+        Mais, ce que j'aime par dessus tout, c'est l'informatique, plus
+        precisement, le code ! Chaque jour ou je code je decouvre de nouvelles
+        choses et ca me permet d'enrichir ce site. J'espere qu'un jour il sera
+        aussi beau que les autres sites tout en restant unique.
+      </p>
+    </div>
+    <hr />
+    <div id="me_contacter">
+      <div class="titre"><p>Me contacter</p></div>
+
+      <div class="formulaire">
+        <form autocomplete="on" name="Me contacter" netlify>
+          <div id="1">
+            <fieldset>
+              <legend>Me contacter</legend>
+              <label
+                >Nom :<input
+                  type="text"
+                  name="Nom"
+                  autocomplete="family-name" /></label
+              ><br />
+              <label
+                >Prenom :<input
+                  type="text"
+                  name="Prénom"
+                  autocomplete="name"
+                  minlength="3"
+                  required /></label
+              ><br />
+              <label
+                >Moyen de contact :<br />
+                <input
+                  type="radio"
+                  name="Moyen de contact"
+                  title="1"
+                  value="Discord"
+                  required
+                />Discord<br />
+                <input
+                  type="radio"
+                  name="Moyen de contact"
+                  title="2"
+                  value="Instagram"
+                  required
+                />Instagram
+                <br />
+                <input
+                  type="radio"
+                  name="Moyen de contact"
+                  title="3"
+                  value="Mail"
+                  required
+                />Mail</label
+              ><br />
+              <label
+                >Adresse mail/Pseudo :<input
+                  type="text"
+                  name="Adresse mail/Pseudo"
+                  autocomplete="email"
+                  minlength="3"
+                  required /></label
+              ><br />
+              <label
+                >Raison :<input
+                  type="text"
+                  name="Raison"
+                  list="raison"
+                  minlength="10"
+                  required /></label
+              ><br />
+            </fieldset>
+            <fieldset class="message">
+              <legend>Message</legend>
+              <textarea
+                id="message"
+                name="message"
+                required
+                minlength="50"
+              ></textarea>
+            </fieldset>
+          </div>
+          <div id="2">
+            <fieldset id="contacter">
+              <legend>Envoyer</legend>
+              <input type="submit" value="Envoyer le formulaire" />
+            </fieldset>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>
