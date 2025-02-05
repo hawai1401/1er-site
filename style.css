@@ -19,22 +19,132 @@
 html {
   --primary-color: #e1e4ce;
   --secondary-color: #5aa3ac;
-  --tertiary-color: none;
+  --tertiary-color: #c75c79;
   --border-color: #485c9b;
   --text-color: none;
   --hr-color: #393b70;
 }
 /* ============================= */
+/*             Menu              */
+/* ============================= */
+.nav-toggler {
+  position: fixed;
+  z-index: 10;
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.line {
+  position: absolute;
+  display: block;
+  height: 4px;
+  background: var(--tertiary-color);
+  border-radius: 30px;
+  transition: transform 0.7s ease-out, opacity 0.1s ease-out;
+}
+.l1 {
+  transform: translateY(-12px);
+}
+.l3 {
+  transform: translateY(12px);
+}
+.nav-toggler.active .l1 {
+  transform: translateY(0px) rotate(135deg);
+  border: solid var(--border-color) 2px;
+  opacity: 100%;
+  background: #f1f1f1;
+}
+.nav-toggler.active .l2 {
+  opacity: 0;
+}
+.nav-toggler.active .l3 {
+  transform: translateY(0px) rotate(-135deg);
+  border: solid var(--border-color) 2px;
+  background: #f1f1f1;
+}
+nav {
+  z-index: 9;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--primary-color);
+  border: 5px solid var(--border-color);
+  border-radius: 30px 0 0 30px;
+  transform: translateX(150%);
+  transition: transform 0.7s cubic-bezier(0.5, 0, 0, 0.7);
+  width: 270px;
+  height: 98.75%;
+}
+nav.active {
+  transform: translateX(0%);
+}
+nav a {
+  font-family: "Silvertones";
+  color: var(--text-color);
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+}
+a {
+  transition: 0.3s ease;
+  display: inline-block;
+  transform: scale(1);
+  text-shadow: 0px 0px 0px none;
+}
+.logo img {
+  width: 75px;
+  height: 75px;
+  border: solid var(--border-color) 2px;
+  border-radius: 50px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+}
+.nav-footer {
+  transform: translateX(0%) translateY(245%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-footer .youtube img,
+.nav-footer .discord img,
+.nav-footer .instagram img {
+  padding-top: 4px;
+  padding-right: 1px;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  transition: 0.3s ease;
+}
+.nav-footer .youtube,
+.nav-footer .discord,
+.nav-footer .instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  background-color: var(--secondary-color);
+  margin: 2px;
+  border-radius: 30px;
+}
+/* ============================= */
 /*          Global Styles        */
 /* ============================= */
-/*html {
-  background: rgb(105, 40, 78);
-  background: -moz-linear-gradient(100deg, rgba(105, 40, 78, 1) 0%, rgba(9, 9, 121, 1) 100%);
-  background: -webkit-linear-gradient(100deg, rgba(105, 40, 78, 1) 0%, rgba(9, 9, 121, 1) 100%);
-  background: linear-gradient(100deg, rgba(105, 40, 78, 1) 0%, rgba(9, 9, 121, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#69284e",endColorstr="#090979",GradientType=1);
-  color: white;
-}*/
 body {
   background: radial-gradient(circle, var(--secondary-color), #000000);
   background-size: cover;
@@ -91,45 +201,10 @@ hr {
   margin-top: 20px;
 }
 #reseaux img {
+  margin: 0 10px;
   background-color: var(--secondary-color);
   padding: 10px;
   transition: 0.3s ease;
-}
-
-/* Social Media Hover Styles */
-#youtube:hover img {
-  background-color: #ff0001;
-}
-#twitter:hover img {
-  background-color: #1d9bf1;
-}
-#discord:hover img {
-  background-color: #5663f7;
-}
-#snapchat:hover img {
-  background-color: #fefc01;
-}
-#instagram:hover img {
-  background: rgb(255, 220, 128);
-  background: linear-gradient(
-    63deg,
-    rgba(255, 220, 128, 1) 0%,
-    rgba(252, 175, 69, 1) 15%,
-    rgba(245, 96, 64, 1) 25%,
-    rgba(253, 29, 29, 1) 41%,
-    rgba(225, 48, 108, 1) 59%,
-    rgba(131, 58, 180, 1) 73%,
-    rgba(91, 81, 216, 1) 86%,
-    rgba(64, 93, 230, 1) 100%
-  );
-}
-#tiktok:hover img {
-  background: rgb(1, 243, 232);
-  background: linear-gradient(
-    45deg,
-    rgba(1, 243, 232, 1) 0%,
-    rgba(255, 0, 81, 1) 100%
-  );
 }
 
 /* ============================= */
@@ -284,6 +359,24 @@ input[type="email"] {
 
 /* Pour les écrans ≤ 768px */
 @media (max-width: 768px) {
+  /* Menu */
+  .nav-toggler {
+    top: 10px;
+    right: 15px;
+  }
+
+  .line {
+    width: 85%;
+  }
+
+  nav {
+    width: 150px;
+    min-height: 250px;
+  }
+
+  nav a {
+    font-size: medium;
+  }
   /* Header */
   #en-tete #logo img {
     height: 70px;
@@ -344,6 +437,53 @@ input[type="email"] {
 
 /* Pour les écrans ≥ 768px */
 @media (min-width: 768px) {
+  /* Menu */
+  .nav-toggler {
+    top: 20px;
+    right: 30px;
+  }
+
+  .line {
+    width: 100%;
+  }
+
+  a:hover {
+    transform: scale(1.2);
+    text-shadow: 2px 2px 2px grey;
+  }
+
+  /*nav {
+    width: 250px;
+    min-height: 400px;
+  }*/
+
+  .nav-toggler:hover ~ nav[class=""]:not([class="active"]) {
+    transform: translateX(90%);
+  }
+  nav a {
+    font-size: xx-large;
+  }
+
+  .youtube:hover {
+    background-color: #ff0001;
+  }
+  .discord:hover {
+    background-color: #5663f7;
+  }
+  .instagram:hover {
+    background: rgb(255, 220, 128);
+    background: linear-gradient(
+      63deg,
+      rgba(255, 220, 128, 1) 0%,
+      rgba(252, 175, 69, 1) 15%,
+      rgba(245, 96, 64, 1) 25%,
+      rgba(253, 29, 29, 1) 41%,
+      rgba(225, 48, 108, 1) 59%,
+      rgba(131, 58, 180, 1) 73%,
+      rgba(91, 81, 216, 1) 86%,
+      rgba(64, 93, 230, 1) 100%
+    );
+  }
   /* Header */
   #en-tete #logo img {
     height: 100px;
@@ -367,6 +507,27 @@ input[type="email"] {
   #instagram:hover img {
     height: 70px;
     width: 70px;
+  }
+  /* Social Media Hover Styles */
+  #youtube:hover img {
+    background-color: #ff0001;
+  }
+  #discord:hover img {
+    background-color: #5663f7;
+  }
+  #instagram:hover img {
+    background: rgb(255, 220, 128);
+    background: linear-gradient(
+      63deg,
+      rgba(255, 220, 128, 1) 0%,
+      rgba(252, 175, 69, 1) 15%,
+      rgba(245, 96, 64, 1) 25%,
+      rgba(253, 29, 29, 1) 41%,
+      rgba(225, 48, 108, 1) 59%,
+      rgba(131, 58, 180, 1) 73%,
+      rgba(91, 81, 216, 1) 86%,
+      rgba(64, 93, 230, 1) 100%
+    );
   }
   /* About Me */
   #moi {
