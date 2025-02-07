@@ -295,8 +295,6 @@ input[type="email"] {
     z-index: 9;
     position: fixed;
     top: 0;
-    right: 5px;
-    left: 5px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -306,8 +304,8 @@ input[type="email"] {
     border-radius: 30px;
     transform: translateY(-150%);
     transition: transform 0.7s cubic-bezier(0.5, 0, 0, 0.7);
-    width: 95%;
-    height: 50%;
+    width: 92%;
+    height: 55%;
   }
   nav.active {
     transform: translateY(1%);
