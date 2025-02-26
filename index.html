@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
     <title>hawai1401</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href=".pictures/pdp.png" />
@@ -57,63 +58,65 @@
         </div>
       </div>
     </nav>
-    <div id="en-tete">
-      <div id="logo">
-        <img
-          src=".pictures/pdp.png"
-          alt="Votre navigateur ne supporte pas cette image."
-        />
+    <header>
+      <div id="header">
+        <div id="en-tete" class="noscroll">
+          <div id="logo" class="noscroll">
+            <img
+              src=".pictures/pdp.png"
+              alt="Votre navigateur ne supporte pas cette image."
+            />
+          </div>
+          <div class="titre noscroll"></div>
+        </div>
+        <div id="reseaux">
+          <div id="youtube">
+            <a target="_blank" href="https://youtube.com/@hawai1401"
+              ><img
+                src=".pictures/youtube.png"
+                alt="Votre navigateur ne supporte pas cette image."
+            /></a>
+          </div>
+          <div id="discord">
+            <a
+              target="_blank"
+              href="https://discordapp.com/users/1091617877725024326"
+              ><img
+                src=".pictures/discord.png"
+                alt="Votre navigateur ne supporte pas cette image."
+            /></a>
+          </div>
+          <div id="instagram">
+            <a target="_blank" href="https://instagram.com/hawai1401"
+              ><img
+                src=".pictures/instagram.png"
+                alt="Votre navigateur ne supporte pas cette image."
+            /></a>
+          </div>
+          <div id="github">
+            <a href="https://github.com/hawai1401"
+              ><img
+                src=".pictures/github.png"
+                alt="Votre navigateur ne supporte pas cette image."
+            /></a>
+          </div>
+        </div>
       </div>
-      <div class="titre">
-        <b>hawai1401</b>
-      </div>
-    </div>
-    <div id="reseaux">
-      <div id="youtube">
-        <a target="_blank" href="https://youtube.com/@hawai1401"
-          ><img
-            src=".pictures/youtube.png"
-            alt="Votre navigateur ne supporte pas cette image."
-        /></a>
-      </div>
-      <div id="discord">
-        <a
-          target="_blank"
-          href="https://discordapp.com/users/1091617877725024326"
-          ><img
-            src=".pictures/discord.png"
-            alt="Votre navigateur ne supporte pas cette image."
-        /></a>
-      </div>
-      <div id="instagram">
-        <a target="_blank" href="https://instagram.com/hawai1401"
-          ><img
-            src=".pictures/instagram.png"
-            alt="Votre navigateur ne supporte pas cette image."
-        /></a>
-      </div>
-      <div id="github">
-        <a href="https://github.com/hawai1401"
-          ><img
-            src=".pictures/github.png"
-            alt="Votre navigateur ne supporte pas cette image."
-        /></a>
-      </div>
-    </div>
-    <hr />
-    <div id="sommaire">
-      <div class="titre"><p>Sommaire</p></div>
-      <div id="bio">
+    </header>
+    <hr class="noscroll" />
+    <div id="sommaire" class="noscroll">
+      <div class="titre noscroll"><p>Sommaire</p></div>
+      <div id="bio" class="noscroll">
         <p><a href="#moi">➔ Ma biographie</a></p>
       </div>
-      <div id="commentaire">
+      <div id="commentaire" class="noscroll">
         <p>
           <a href="#commenter">➔ Laisser un commentaire</a>
         </p>
       </div>
     </div>
-    <hr />
-    <div id="moi">
+    <hr class="noscroll" id="moi" />
+    <div class="moi">
       <p>
         <big>Hey,</big><br /><br />
 
@@ -128,8 +131,9 @@
         aussi beau que les autres sites tout en restant unique.
       </p>
     </div>
+    <div class="noscroll" id="commenter"></div>
     <hr />
-    <div id="commenter">
+    <div class="commenter">
       <div class="titre"><p>Commenter</p></div>
       <div class="commentaire">
         <form autocomplete="on" name="Me contacter" netlify>
@@ -156,7 +160,7 @@
         </form>
       </div>
     </div>
-    <hr />
+    <hr class="noscroll" />
     <script src="script.js"></script>
   </body>
 </html>
