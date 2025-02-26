@@ -1,7 +1,7 @@
 /* ============================= */
 /*           Loading             */
 /* ============================= */
-
+@import url(style.css);
 /* ============================= */
 /*     Animation à l'arrivé      */
 /* ============================= */
@@ -19,6 +19,22 @@ body {
     background-position: 10000px 5000px;
   }
 }
+#reseaux img,
+#en-tete #logo img,
+#en-tete .titre {
+  animation: 3.5s ease-in-out 4s infinite neon;
+}
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 25px var(--secondary-color);
+  }
+  50% {
+    box-shadow: 0 0 75px var(--secondary-color);
+  }
+  100% {
+    box-shadow: 0 0 25px var(--secondary-color);
+  }
+}
 /* 1 */
 #en-tete {
   animation: 0.75s ease-in-out forwards titre-2;
@@ -29,7 +45,7 @@ body {
     gap: 15vw;
   }
   to {
-    gap: 15px;
+    gap: 25px;
   }
 }
 /* 2 */
@@ -127,13 +143,15 @@ header {
 @keyframes header {
   from {
     backdrop-filter: blur(0);
-    box-shadow: 0 0 0 black;
-    border-radius: 0;
+    box-shadow: 0 0 0px var(--secondary-color);
+    background-color: #00000000;
+    height: 240px;
   }
   to {
     backdrop-filter: blur(4px);
-    box-shadow: 0 4px 9px black;
-    border-radius: 0 0 30px 30px;
+    box-shadow: 0 0 25px var(--secondary-color);
+    background-color: #000000b4;
+    height: 120px;
   }
 }
 #header {
@@ -146,13 +164,41 @@ header {
 @keyframes header-2 {
   from {
     scale: 1;
-    gap: 15px;
     transform: translateY(0);
   }
   to {
     scale: 0.7;
-    gap: 5px;
     transform: translateY(-20px);
+  }
+}
+#reseaux-2 {
+  animation-name: réseaux-2;
+  animation-timeline: scroll();
+  animation-range: 0 300px;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes réseaux-2 {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-110px) translateX(500px);
+  }
+}
+#en-tete-2 {
+  animation-name: en-tete-2;
+  animation-timeline: scroll();
+  animation-range: 0 300px;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes en-tete-2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-180px);
   }
 }
 div:not(.noscroll),
