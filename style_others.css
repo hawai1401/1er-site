@@ -1,0 +1,220 @@
+@media (min-width: 768px) {
+  /* Menu */
+  .nav-toggler {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    margin: 10px;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+  }
+  .line {
+    position: absolute;
+    display: block;
+    height: 4px;
+    background: var(--tertiary-color);
+    border-radius: 30px;
+    transition: transform 0.7s ease-out, opacity 0.1s ease-out;
+    width: 100%;
+  }
+  .l1 {
+    transform: translateY(-12px);
+  }
+  .l3 {
+    transform: translateY(12px);
+  }
+  .nav-toggler.active .l1 {
+    transform: translateY(0px) rotate(135deg);
+    border: solid var(--border-color) 2px;
+    opacity: 100%;
+    background: #f1f1f1;
+  }
+  .nav-toggler.active .l2 {
+    opacity: 0;
+  }
+  .nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+    border: solid var(--border-color) 2px;
+    background: #f1f1f1;
+  }
+  nav {
+    z-index: 9;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--primary-color);
+    border: 5px solid var(--border-color);
+    border-radius: 30px 0 0 30px;
+    transform: translateX(150%);
+    transition: transform 0.7s cubic-bezier(0.5, 0, 0, 0.7);
+    width: 270px;
+    height: 98.75%;
+  }
+  nav.active {
+    transform: translateX(0%);
+  }
+  nav a {
+    font-family: "Silvertones";
+    color: var(--text-color);
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+    transform: scale(1);
+    text-shadow: 0px 0px 0px none;
+    font-size: xx-large;
+  }
+  .nav-footer {
+    transform: translateX(20%) translateY(325%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img {
+    width: 75px;
+    height: 75px;
+    border: solid var(--border-color) 2px;
+    border-radius: 50px;
+  }
+  .logo {
+    margin-right: 7px;
+
+    transform: translateX(-80px);
+  }
+  .nav-footer .reseaux img {
+    padding-top: 4px;
+    padding-right: 1px;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    transition: 0.3s ease;
+  }
+  .nav-footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    padding: 2px;
+    background-color: var(--secondary-color);
+    margin: 2px;
+    border-radius: 30px;
+  }
+
+  nav a:hover {
+    transform: scale(1.2);
+    text-shadow: 2px 2px 2px grey;
+  }
+  .nav-toggler:hover ~ nav[class=""]:not([class="active"]) {
+    transform: translateX(90%);
+  }
+  .youtube:hover {
+    background-color: #ff0001;
+  }
+  .discord:hover {
+    background-color: #5663f7;
+  }
+  .instagram:hover {
+    background: rgb(255, 220, 128);
+    background: linear-gradient(
+      63deg,
+      rgba(255, 220, 128, 1) 0%,
+      rgba(252, 175, 69, 1) 15%,
+      rgba(245, 96, 64, 1) 25%,
+      rgba(253, 29, 29, 1) 41%,
+      rgba(225, 48, 108, 1) 59%,
+      rgba(131, 58, 180, 1) 73%,
+      rgba(91, 81, 216, 1) 86%,
+      rgba(64, 93, 230, 1) 100%
+    );
+  }
+  /* Réseaux sociaux */
+  #reseaux img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+  /* Social Media Hover (appliqué à plusieurs sélecteurs) */
+  #reseaux div:hover img {
+    scale: 1.2;
+  }
+  /* Social Media Hover Styles */
+  #youtube:hover img {
+    background-color: #ff0001;
+  }
+  #discord:hover img {
+    background-color: #5663f7;
+  }
+  #instagram:hover img {
+    background: rgb(255, 220, 128);
+    background: linear-gradient(
+      63deg,
+      rgba(255, 220, 128, 1) 0%,
+      rgba(252, 175, 69, 1) 15%,
+      rgba(245, 96, 64, 1) 25%,
+      rgba(253, 29, 29, 1) 41%,
+      rgba(225, 48, 108, 1) 59%,
+      rgba(131, 58, 180, 1) 73%,
+      rgba(91, 81, 216, 1) 86%,
+      rgba(64, 93, 230, 1) 100%
+    );
+  }
+  #github:hover img {
+    background-color: #ffffff;
+  }
+  /* About Me */
+  #moi {
+    margin-left: 10vh;
+    margin-right: 10vh;
+  }
+  /* Biography & comment */
+  #sommaire .titre {
+    font-size: 45px;
+  }
+  #bio {
+    width: 370px;
+    font-size: 35px;
+  }
+  #commentaire {
+    width: 550px;
+    font-size: 35px;
+  }
+  #commentaire br {
+    display: none;
+  }
+  #bio:hover {
+    width: 420px;
+    font-size: 40px;
+  }
+  #commentaire:hover {
+    width: 610px;
+    font-size: 40px;
+  }
+  /* Fieldset & Message */
+  fieldset {
+    font-size: 20px;
+    width: 500px;
+    height: 303px;
+  }
+  #message {
+    width: 780px;
+    height: 250px;
+  }
+  /* Contact Me */
+  .commenter .titre {
+    margin-bottom: 30px;
+  }
+  .commenter .titre p {
+    font-size: 45px;
+  }
+}
