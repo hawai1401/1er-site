@@ -72,23 +72,13 @@ body {
   }
   100% {
     transform: translateY(0);
-    gap: 17px;
+    gap: 20px;
     opacity: 100%;
   }
 }
 /* 3 */
-#youtube img {
-  animation: 0.5s ease-in-out 1.75s youtube;
-}
-@keyframes youtube {
-  50% {
-    background-color: #ff0001;
-    scale: 1.2;
-  }
-}
-/* 4 */
 #discord img {
-  animation: 0.5s ease-in-out 2s discord;
+  animation: 0.5s ease-in-out 1.75s discord;
 }
 @keyframes discord {
   50% {
@@ -96,30 +86,19 @@ body {
     scale: 1.2;
   }
 }
-/* 5 */
-#instagram img {
-  animation: 0.5s ease-in-out 2.25s instagram;
+/* 4 */
+#mail img {
+  animation: 0.5s ease-in-out 2s mail;
 }
-@keyframes instagram {
+@keyframes mail {
   50% {
-    background: rgb(255, 220, 128);
-    background: linear-gradient(
-      63deg,
-      rgba(255, 220, 128, 1) 0%,
-      rgba(252, 175, 69, 1) 15%,
-      rgba(245, 96, 64, 1) 25%,
-      rgba(253, 29, 29, 1) 41%,
-      rgba(225, 48, 108, 1) 59%,
-      rgba(131, 58, 180, 1) 73%,
-      rgba(91, 81, 216, 1) 86%,
-      rgba(64, 93, 230, 1) 100%
-    );
+    background-color: #208cdc;
     scale: 1.2;
   }
 }
-/* 6 */
+/* 5 */
 #github img {
-  animation: 0.5s ease-in-out 2.5s github;
+  animation: 0.5s ease-in-out 2.25s github;
 }
 @keyframes github {
   50% {
@@ -183,7 +162,7 @@ header {
     transform: translateY(0) translateX(0);
   }
   to {
-    transform: translateY(-110px) translateX(500px);
+    transform: translateY(-110px) translateX(300px);
   }
 }
 #en-tete-2 {
