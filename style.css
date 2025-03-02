@@ -32,6 +32,12 @@
 /* ============================= */
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--hr-color) var(--primary-color);
+  scrollbar-arrow-color: var(--hr-color);
+}
+html::-webkit-scrollbar-button {
+  background-color: var(--hr-color);
 }
 body {
   color: var(--text-color);
@@ -66,7 +72,7 @@ header {
   border: solid var(--secondary-color) 3px;
   box-shadow: 0 0 25px var(--secondary-color);
   border-radius: 50px;
-  transition: 0.2s ease;
+  transition: 0.2s ease-in-out;
   flex-grow: 1;
   flex-basis: 60px;
   height: clamp(50px, 10vw, 100px);
@@ -100,7 +106,7 @@ header {
 #reseaux img {
   background-color: var(--secondary-color);
   padding: 10px;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
   flex-grow: 1;
   flex-basis: 60px;
   box-shadow: 0 0 25px var(--secondary-color);
@@ -112,9 +118,10 @@ header {
 .moi {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  gap: 20px;
 }
-.moi p {
+.moi > p {
   font-size: 17px;
   font-family: "Silvertones";
   margin: 10px;
@@ -129,7 +136,64 @@ header {
 .moi big {
   font-size: 30px;
 }
+.moi .titre p {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  font-family: "Spin Cycle";
+  border: solid var(--border-color) 3px;
+  background: var(--primary-color);
+  font-size: 50px;
+}
+.projet-container {
+  width: 370px;
+  height: 180px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 30px;
 
+  scrollbar-width: thin;
+  scrollbar-color: var(--hr-color) var(--primary-color);
+  scrollbar-arrow-color: var(--hr-color);
+}
+.projet-container::-webkit-scrollbar-button {
+  background-color: var(--hr-color);
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 50px;
+}
+.projet {
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 350px;
+  height: 180px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+}
+.projet .titre {
+  font-size: 17px;
+  text-decoration: underline;
+}
+.projet .description {
+  font-size: 13px;
+}
 /* ============================= */
 /*       Summary Section         */
 /* ============================= */
@@ -139,7 +203,7 @@ header {
 }
 #sommaire a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color);
 }
 #sommaire .titre {
   position: relative;
@@ -148,7 +212,7 @@ header {
   justify-content: center;
 }
 #sommaire .titre p {
-  transition: 0.2s ease;
+  transition: 0.2s ease-in-out;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
@@ -175,7 +239,7 @@ header {
 /* ============================= */
 #bio,
 #commentaire {
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 
 /* ============================= */
@@ -225,7 +289,7 @@ input[type="submit"] {
   font-family: "Silvertones";
   background-color: var(--primary-color);
   border: solid var(--border-color) 3px;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 input[type="submit"]:active {
   background-color: rgb(99, 255, 60);
@@ -245,7 +309,7 @@ input[type="email"] {
   justify-content: center;
 }
 .commenter .titre p {
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
   margin: 5px;
   padding-top: 15px;
   padding-left: 20px;
