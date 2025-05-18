@@ -175,9 +175,6 @@ h2 {
 .project:hover h3 {
   color: var(--text-color-light);
 }
-.project:hover {
-  scale: 1.05;
-}
 .project p {
   text-align: justify;
   margin: 0 20px;
