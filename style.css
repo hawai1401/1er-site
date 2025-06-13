@@ -209,18 +209,25 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.project:nth-child(3) {
+  background-image: url(panel.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 input::placeholder,
 textarea::placeholder {
   color: var(--text-color);
   font-family: "Roboto", sans-serif;
 }
-input, textarea {
+input,
+textarea {
   color: var(--text-color);
   border: 2px solid var(--secondary-color);
   outline: none;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   box-shadow: 0 0 0 1px var(--tertiary-color);
 }
 
